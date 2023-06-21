@@ -1,0 +1,29 @@
+﻿<Page x:Class="TaskHill.Pages.PageCategory"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TaskHill.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="PageCategory">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="ImageBackToCatalogue" Grid.Row="0" Grid.Column="0" Source="/Resources/arrow.png" Width="25" Height="25" MouseLeftButtonDown="ImageBackToCatalogue_MouseLeftButtonDown"/>
+        <Button x:Name="ButtonToEditCategory" Grid.Row="0" Grid.Column="1" Content="Редактирование" FontSize="18" Margin="0,80,0,0" Background="Transparent"/>
+        <Button x:Name="ButtonToSetCategory" Grid.Row="0" Grid.Column="2" Content="Назначение" FontSize="18" Margin="0,80,0,0" Background="Transparent"/>
+        <Frame x:Name="FrameCategory" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Source="/Pages/Category/PageEditCategory.xaml" NavigationUIVisibility="Hidden">
+            
+        </Frame>
+    </Grid>
+</Page>

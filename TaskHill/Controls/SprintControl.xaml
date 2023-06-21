@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="TaskHill.Controls.SprintControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TaskHill.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="800">
+    <Border BorderThickness="5" CornerRadius="5">
+        <StackPanel>
+            <Expander Background="#F4F5F7" ExpandDirection="Down" IsExpanded="True">
+                <Expander.Header>
+                    <WrapPanel Margin="15">
+                        <TextBlock x:Name="TextBlockSprintName" Text="{Binding SprintName}" Margin="0,0,15,0"/>
+                        <TextBlock x:Name="TextBlockDates" Text="{Binding SprintDates}" Foreground="Gray"/>
+                        <TextBlock Text="Задач:" Grid.Column="1" Margin="15,0,0,0" Foreground="Gray"/>
+                        <TextBlock Text="{Binding TaskCount}" Foreground="Gray"/>
+                    </WrapPanel>
+                </Expander.Header>
+                <StackPanel Margin="20,0,20,15" x:Name="StackPanelTask">
+
+                </StackPanel>
+            </Expander>
+        </StackPanel>
+    </Border>
+</UserControl>

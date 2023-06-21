@@ -1,0 +1,43 @@
+﻿<Page x:Class="TaskHill.Pages.PageKeepRegistration"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TaskHill.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageKeepRegistration">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image x:Name="ImageBackToLogin" Source="/Resources/arrow.png" Width="25" Height="25" MouseLeftButtonDown="ImageBackToLogin_MouseLeftButtonDown"/>
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Source="/Resources/logo.png"/>
+            <TextBlock Grid.Column="1" Text="Регистрация" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Segoe UI Light"/>
+        </Grid>
+        <TextBox x:Name="TextBoxLastName" Grid.Column="1" Grid.Row="1" Tag="Фамилия" Margin="0,25,15,0" FontSize="15" Style="{DynamicResource myTB}" Cursor="IBeam"/>
+        <TextBox x:Name="TextBoxFirstName" Grid.Column="1" Grid.Row="2" Tag="Имя" Margin="0,25,15,0" FontSize="15" Style="{DynamicResource myTB}" Cursor="IBeam"/>
+        <TextBox x:Name="TextBoxPatronymic" Grid.Column="1" Grid.Row="3" Tag="Отчество*" Margin="0,25,15,0" FontSize="15" Style="{DynamicResource myTB}"/>
+        <Image x:Name="ImageAvatar" Source="/Resources/avatarProfile.png" Grid.Column="2" Grid.Row="1" Grid.RowSpan="3" MouseLeftButtonDown="ImageAvatar_MouseLeftButtonDown"/>
+        <Button x:Name="ButtonRegister" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" Content="Зарегистрироваться" Margin="0,15,0,10" FontSize="16" Style="{StaticResource myBtn}" Cursor="Hand"/>
+    </Grid>
+</Page>
